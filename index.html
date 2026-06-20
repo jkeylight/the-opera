@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THE OPERA™ — Valentina Rossi — Season Eterna</title>
+  <meta name="description" content="THE OPERA™ — A legendary performance starring Valentina Rossi. Season Eterna.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/styles/main.scss">
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor">
+    <div class="cursor__ring"></div>
+    <div class="cursor__text"></div>
+  </div>
+
+  <!-- PRELOADER — THE CURTAIN -->
+  <div class="preloader" id="preloader">
+    <div class="preloader__curtain preloader__curtain--left"></div>
+    <div class="preloader__curtain preloader__curtain--right"></div>
+    <div class="preloader__content">
+      <div class="preloader__title" data-split>THE OPERA™</div>
+      <div class="preloader__subtitle" data-split>SEASON ETERNA</div>
+      <div class="preloader__model" data-split>VALENTINA ROSSI</div>
+    </div>
+  </div>
+
+  <!-- MAIN EXPERIENCE -->
+  <main class="opera" id="opera">
+
+    <!-- 01 CURTAIN — HERO -->
+    <section class="section section--hero" id="hero" data-scene="curtain">
+      <div class="hero__bg">
+        <div class="hero__chandelier hero__chandelier--left"></div>
+        <div class="hero__chandelier hero__chandelier--right"></div>
+        <div class="hero__image-wrap">
+          <div class="hero__image" data-reveal style="background-image: url('/images/img-01-hero.png')"></div>
+        </div>
+      </div>
+      <div class="hero__content">
+        <h1 class="hero__title">
+          <span class="hero__title-line" data-split>THE OPERA™</span>
+          <span class="hero__title-line hero__title-line--sub" data-split>SEASON ETERNA</span>
+        </h1>
+        <div class="hero__model" data-split>VALENTINA ROSSI</div>
+      </div>
+      <div class="hero__scroll">
+        <span class="hero__scroll-text">THE PERFORMANCE BEGINS</span>
+        <div class="hero__scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- 02 GRAND ENTRANCE -->
+    <section class="section section--entrance" id="entrance" data-scene="act-1">
+      <div class="entrance__content">
+        <div class="section-label" data-split>ACT I</div>
+        <h2 class="section-title" data-split>THE GRAND ENTRANCE</h2>
+        <p class="section-text" data-split>The city disappears behind you. Carriages depart. Footsteps fade. Rain evaporates into stone. Only the Opera remains.</p>
+      </div>
+      <div class="entrance__image">
+        <div class="image-reveal" data-reveal>
+          <div class="image-reveal__placeholder" style="background-image: url('/images/img-02-grand-entrance.png')"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 MARBLE STAIRCASE -->
+    <section class="section section--staircase" id="staircase" data-scene="act-1">
+      <div class="staircase__content">
+        <h2 class="section-title section-title--large" data-split>THE STAIRCASE</h2>
+        <p class="section-text" data-split>Each step elevates importance. Each landing increases tension. Each glance upward promises revelation. Yet reveals nothing.</p>
+      </div>
+      <div class="staircase__visual">
+        <div class="staircase__image" data-reveal data-parallax="0.25" style="background-image: url('/images/img-03-staircase.png')"></div>
+        <div class="staircase__ornament"></div>
+      </div>
+    </section>
+
+    <!-- 04 GOLDEN FOYER -->
+    <section class="section section--foyer" id="foyer" data-scene="act-2">
+      <div class="foyer__grid">
+        <div class="foyer__left">
+          <div class="section-label" data-split>ACT II</div>
+          <h2 class="section-title" data-split>THE FOYER</h2>
+          <p class="section-text" data-split>Gold reflects candlelight. Crystal reflects gold. Mirrors reflect everyone. Except the truth.</p>
+        </div>
+        <div class="foyer__right">
+          <div class="image-reveal image-reveal--tall" data-reveal>
+            <div class="image-reveal__placeholder" style="background-image: url('/images/img-04-foyer.png')"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 MIRROR GALLERY -->
+    <section class="section section--mirrors" id="mirrors" data-scene="act-2">
+      <div class="mirrors__header">
+        <h2 class="section-title section-title--center" data-split>THE MIRROR GALLERY</h2>
+        <p class="section-text section-text--center" data-split>People come here searching for themselves. Instead they discover obsession. Reflections multiply endlessly. Reality becomes uncertain.</p>
+      </div>
+      <div class="mirrors__grid">
+        <div class="mirrors__item mirrors__item--1" data-reveal data-parallax="0.1" style="background-image: url('/images/img-05-mirror-01.png')"></div>
+        <div class="mirrors__item mirrors__item--2" data-reveal data-parallax="0.15" style="background-image: url('/images/img-06-mirror-02.png')"></div>
+        <div class="mirrors__item mirrors__item--3" data-reveal data-parallax="0.2" style="background-image: url('/images/img-07-mirror-03.png')"></div>
+        <div class="mirrors__item mirrors__item--4" data-reveal data-parallax="0.12" style="background-image: url('/images/img-08-mirror-04.png')"></div>
+      </div>
+    </section>
+
+    <!-- 06 FIRST GLIMPSE -->
+    <section class="section section--glimpse" id="glimpse" data-scene="act-2">
+      <div class="glimpse__content">
+        <div class="glimpse__silhouette" data-reveal style="background-image: url('/images/img-09-first-glimpse.png')"></div>
+        <h2 class="glimpse__title" data-split>FIRST GLIMPSE</h2>
+        <p class="glimpse__text" data-split>A silhouette. Nothing more. A movement behind silk curtains. The audience stops breathing. The moment vanishes. The fascination remains.</p>
+      </div>
+    </section>
+
+    <!-- 07 ROYAL BOXES -->
+    <section class="section section--royal" id="royal" data-scene="act-3">
+      <div class="royal__content">
+        <div class="section-label" data-split>ACT III</div>
+        <h2 class="section-title" data-split>THE ROYAL BOXES</h2>
+        <p class="section-text" data-split>Power rarely sits on stage. Power watches. Power observes. Power chooses. From here empires have applauded. Dynasties have whispered.</p>
+      </div>
+      <div class="royal__gallery">
+        <div class="royal__item" data-reveal>
+          <div class="image-reveal"><div class="image-reveal__placeholder" style="background-image: url('/images/img-10-royal-box-01.png')"></div></div>
+        </div>
+        <div class="royal__item" data-reveal>
+          <div class="image-reveal"><div class="image-reveal__placeholder" style="background-image: url('/images/img-11-royal-box-02.png')"></div></div>
+        </div>
+        <div class="royal__item" data-reveal>
+          <div class="image-reveal"><div class="image-reveal__placeholder" style="background-image: url('/images/img-12-royal-box-03.png')"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08 SALONS -->
+    <section class="section section--salons" id="salons" data-scene="act-3">
+      <div class="salons__content">
+        <h2 class="section-title section-title--large" data-split>THE SALONS</h2>
+        <p class="section-text" data-split>The official performance continues. Yet the real conversations happen here. Behind closed doors. Behind velvet walls. Behind smiles.</p>
+      </div>
+      <div class="salons__editorial">
+        <div class="salons__image salons__image--1" data-reveal>
+          <div class="image-reveal"><div class="image-reveal__placeholder" style="background-image: url('/images/img-13-salon-01.png')"></div></div>
+        </div>
+        <div class="salons__text-block">
+          <span class="salons__number">01</span>
+          <p class="salons__caption" data-split>Private conversations shape public history.</p>
+        </div>
+        <div class="salons__image salons__image--2" data-reveal>
+          <div class="image-reveal"><div class="image-reveal__placeholder" style="background-image: url('/images/img-14-salon-02.png')"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 09 RED CORRIDORS -->
+    <section class="section section--corridors" id="corridors" data-scene="act-3">
+      <div class="corridors__content">
+        <h2 class="section-title section-title--massive" data-split>THE RED CORRIDORS</h2>
+      </div>
+      <div class="corridors__visual">
+        <div class="corridors__image corridors__image--left" data-reveal data-parallax="0.3" style="background-image: url('/images/img-15-corridor-01.png')"></div>
+        <div class="corridors__image corridors__image--right" data-reveal data-parallax="0.2" style="background-image: url('/images/img-16-corridor-02.png')"></div>
+      </div>
+      <div class="corridors__text">
+        <p class="section-text" data-split>Long corridors. Endless velvet. Soft light. Quiet footsteps. Every corridor feels familiar. Even when it has never been seen before.</p>
+      </div>
+    </section>
+
+    <!-- 10 ORCHESTRA -->
+    <section class="section section--orchestra" id="orchestra" data-scene="act-4">
+      <div class="orchestra__content">
+        <div class="section-label" data-split>ACT IV</div>
+        <h2 class="section-title" data-split>THE ORCHESTRA</h2>
+        <p class="section-text" data-split>Strings begin. The room changes. Wood vibrates. Air vibrates. Memory vibrates. Music transforms architecture into emotion.</p>
+      </div>
+      <div class="orchestra__visualizer">
+        <div class="orchestra__line" data-orchestra></div>
+        <div class="orchestra__line" data-orchestra></div>
+        <div class="orchestra__line" data-orchestra></div>
+        <div class="orchestra__line" data-orchestra></div>
+        <div class="orchestra__line" data-orchestra></div>
+        <div class="orchestra__line" data-orchestra></div>
+        <div class="orchestra__line" data-orchestra></div>
+        <div class="orchestra__line" data-orchestra></div>
+      </div>
+    </section>
+
+    <!-- 11 WINGS -->
+    <section class="section section--wings" id="wings" data-scene="act-4">
+      <div class="wings__content">
+        <h2 class="section-title" data-split>THE WINGS</h2>
+        <p class="section-text" data-split>Every masterpiece contains hidden machinery. Behind elegance: precision. Behind beauty: discipline. Behind wonder: control.</p>
+      </div>
+      <div class="wings__image" data-reveal>
+        <div class="image-reveal"><div class="image-reveal__placeholder" style="background-image: url('/images/img-17-wings.png')"></div></div>
+      </div>
+    </section>
+
+    <!-- 12 DRESS CIRCLE -->
+    <section class="section section--dress-circle" id="dress-circle" data-scene="act-4">
+      <div class="dress-circle__content">
+        <h2 class="section-title section-title--large" data-split>THE DRESS CIRCLE</h2>
+        <p class="section-text" data-split>The audience watches the stage. The stage watches the audience. The relationship remains unresolved. Until she appears.</p>
+      </div>
+      <div class="dress-circle__panorama" data-reveal data-parallax="0.15" style="background-image: url('/images/img-18-dress-circle.png')"></div>
+    </section>
+
+    <!-- 13 REVELATION -->
+    <section class="section section--revelation" id="revelation" data-scene="act-5">
+      <div class="revelation__content">
+        <div class="section-label" data-split>ACT V</div>
+        <h2 class="revelation__title" data-split>THE REVELATION</h2>
+      </div>
+      <div class="revelation__image" data-reveal>
+        <div class="image-reveal image-reveal--hero"><div class="image-reveal__placeholder" style="background-image: url('/images/img-19-revelation.png')"></div></div>
+      </div>
+      <div class="revelation__statement">
+        <p class="revelation__text" data-split>The room becomes still. Conversation ends. Movement ends. Expectation reaches its limit. Valentina Rossi arrives. Nothing else changes. Everything changes.</p>
+      </div>
+    </section>
+
+    <!-- 14 ARIA -->
+    <section class="section section--aria" id="aria" data-scene="act-5">
+      <div class="aria__content">
+        <div class="aria__line" data-split>SHE ARRIVED</div>
+        <div class="aria__line" data-split>THE ROOM CHANGED</div>
+        <div class="aria__line" data-split>THE CURTAIN OPENED</div>
+        <div class="aria__line" data-split>THE LEGEND BEGAN</div>
+      </div>
+    </section>
+
+    <!-- 15 DEVOTION -->
+    <section class="section section--devotion" id="devotion" data-scene="act-6">
+      <div class="devotion__content">
+        <div class="section-label" data-split>ACT VI</div>
+        <h2 class="section-title section-title--large" data-split>THE DEVOTION</h2>
+        <p class="section-text" data-split>At first the audience observed. Then admired. Then followed. Now they surrender. Admiration is temporary. Devotion is permanent.</p>
+      </div>
+      <div class="devotion__grid">
+        <div class="devotion__item" data-reveal>
+          <div class="image-reveal"><div class="image-reveal__placeholder" style="background-image: url('/images/img-20-devotion-01.png')"></div></div>
+        </div>
+        <div class="devotion__item" data-reveal>
+          <div class="image-reveal"><div class="image-reveal__placeholder" style="background-image: url('/images/img-21-devotion-02.png')"></div></div>
+        </div>
+        <div class="devotion__item" data-reveal>
+          <div class="image-reveal"><div class="image-reveal__placeholder" style="background-image: url('/images/img-22-devotion-03.png')"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 16 FINAL CURTAIN -->
+    <section class="section section--final-curtain" id="final-curtain" data-scene="act-6">
+      <div class="final-curtain__visual">
+        <div class="final-curtain__fabric final-curtain__fabric--left"></div>
+        <div class="final-curtain__fabric final-curtain__fabric--right"></div>
+      </div>
+      <div class="final-curtain__content">
+        <p class="final-curtain__text" data-split>The curtain descends. Slowly. Inevitably. Beautiful things end. That is what makes them beautiful.</p>
+      </div>
+    </section>
+
+    <!-- 17 APPLAUSE -->
+    <section class="section section--applause" id="applause" data-scene="act-7">
+      <div class="applause__content">
+        <div class="section-label" data-split>ACT VII</div>
+        <div class="applause__word applause__word--1">APPLAUSE</div>
+        <div class="applause__word applause__word--2">APPLAUSE</div>
+        <div class="applause__word applause__word--3">APPLAUSE</div>
+        <div class="applause__word applause__word--4">APPLAUSE</div>
+      </div>
+    </section>
+
+    <!-- 18 EMPTY STAGE -->
+    <section class="section section--empty" id="empty" data-scene="act-7">
+      <div class="empty__image" data-reveal>
+        <div class="image-reveal"><div class="image-reveal__placeholder" style="background-image: url('/images/img-23-empty-stage.png')"></div></div>
+      </div>
+      <div class="empty__content">
+        <h2 class="empty__title" data-split>THE EMPTY STAGE</h2>
+        <p class="empty__text" data-split>Eventually every theatre becomes quiet. Every chandelier dims. Every corridor empties. Every note disappears. Only memory remains.</p>
+      </div>
+    </section>
+
+    <!-- FINAL SCREEN -->
+    <section class="section section--final" id="final" data-scene="curtain-close">
+      <div class="final__content">
+        <div class="final__title" data-split>THE OPERA™</div>
+        <div class="final__model" data-split>VALENTINA ROSSI</div>
+        <div class="final__season" data-split>SEASON ETERNA</div>
+        <div class="final__divider"></div>
+        <div class="final__closing" data-split>THE CURTAIN FALLS</div>
+        <div class="final__legend" data-split>THE LEGEND REMAINS</div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="footer">
+      <div class="footer__content">
+        <div class="footer__divider"></div>
+        <p class="footer__studio">A LOOKBOOK Studio Experience</p>
+        <p class="footer__credit">© Norman James</p>
+        <p class="footer__love">made with love ❤️ by Empathy Studio</p>
+      </div>
+    </footer>
+
+  </main>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

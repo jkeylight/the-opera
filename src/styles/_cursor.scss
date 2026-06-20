@@ -1,0 +1,62 @@
+// THE OPERA™ — Cursor
+@use 'variables' as *;
+
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  pointer-events: none;
+  mix-blend-mode: difference;
+
+  &__ring {
+    width: 18px;
+    height: 18px;
+    border: 1px solid $antique-gold;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s $ease-opera, height 0.3s $ease-opera, border-color 0.3s $ease-opera;
+  }
+
+  &__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: $font-secondary;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: $antique-gold;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s $ease-opera;
+  }
+
+  &--hover {
+    .cursor__ring {
+      width: 60px;
+      height: 60px;
+      border-color: $warm-gold;
+    }
+    .cursor__text {
+      opacity: 1;
+    }
+  }
+
+  &--click {
+    .cursor__ring {
+      transform: translate(-50%, -50%) scale(0.8);
+    }
+  }
+}
+
+// Hide cursor on mobile
+@media (max-width: $breakpoint-md) {
+  .cursor {
+    display: none;
+  }
+  body {
+    cursor: auto;
+  }
+}

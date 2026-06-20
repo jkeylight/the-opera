@@ -1,0 +1,1035 @@
+// THE OPERA™ — Sections
+@use 'variables' as *;
+
+.section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+// Section Labels
+.section-label {
+  font-family: $font-secondary;
+  font-size: 0.75rem;
+  font-weight: 300;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: $antique-gold;
+  margin-bottom: $space-md;
+}
+
+// Section Titles
+.section-title {
+  font-family: $font-display;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 400;
+  color: $chandelier-ivory;
+  margin-bottom: $space-md;
+
+  &--large {
+    font-size: clamp(3rem, 8vw, 7rem);
+  }
+
+  &--massive {
+    font-size: clamp(4rem, 12vw, 10rem);
+  }
+
+  &--center {
+    text-align: center;
+  }
+}
+
+// Section Text
+.section-text {
+  font-family: $font-primary;
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  font-weight: 300;
+  line-height: 1.8;
+  color: $chandelier-ivory;
+  max-width: 600px;
+  opacity: 0.85;
+
+  &--center {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+// Image Reveal
+.image-reveal {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+
+  &__placeholder {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+
+  &--hero {
+    height: 80vh;
+
+    .image-reveal__placeholder {
+      background-size: cover;
+      background-position: center top;
+    }
+  }
+
+  &--tall {
+    height: 70vh;
+  }
+}
+
+// ============================================
+// HERO SECTION
+// ============================================
+.section--hero {
+  height: 350vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: $stage-black;
+}
+
+.hero {
+  &__bg {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  &__chandelier {
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    background: radial-gradient(ellipse at center, rgba($antique-gold, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+
+    &--left {
+      left: 5%;
+      top: 10%;
+    }
+
+    &--right {
+      right: 5%;
+      top: 15%;
+    }
+  }
+
+  &__image-wrap {
+    position: absolute;
+    width: 60%;
+    height: 80%;
+    max-width: 800px;
+    overflow: hidden;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: $opera-red;
+    transform: scale(1.15);
+    filter: blur(20px);
+    opacity: 0;
+  }
+
+  &__content {
+    position: sticky;
+    top: 30vh;
+    text-align: center;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  &__title {
+    margin-bottom: $space-lg;
+  }
+
+  &__title-line {
+    display: block;
+    font-family: $font-display;
+    font-size: clamp(3rem, 10vw, 8rem);
+    font-weight: 400;
+    color: $chandelier-ivory;
+    letter-spacing: 0.15em;
+
+    &--sub {
+      font-family: $font-primary;
+      font-size: clamp(1rem, 3vw, 2rem);
+      font-weight: 300;
+      letter-spacing: 0.5em;
+      color: $antique-gold;
+      margin-top: $space-sm;
+    }
+  }
+
+  &__model {
+    font-family: $font-secondary;
+    font-size: clamp(0.75rem, 1.5vw, 1rem);
+    font-weight: 300;
+    letter-spacing: 0.4em;
+    color: $chandelier-ivory;
+    opacity: 0.7;
+  }
+
+  &__scroll {
+    position: absolute;
+    bottom: $space-lg;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $space-sm;
+  }
+
+  &__scroll-text {
+    font-family: $font-secondary;
+    font-size: 0.625rem;
+    letter-spacing: 0.3em;
+    color: $antique-gold;
+    text-transform: uppercase;
+  }
+
+  &__scroll-line {
+    width: 1px;
+    height: 60px;
+    background: linear-gradient(to bottom, $antique-gold, transparent);
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 1; transform: scaleY(1); }
+  50% { opacity: 0.5; transform: scaleY(0.6); }
+}
+
+// ============================================
+// GRAND ENTRANCE
+// ============================================
+.section--entrance {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  padding: $space-xl;
+  gap: $space-xl;
+  align-items: center;
+}
+
+.entrance {
+  &__content {
+    padding-right: $space-lg;
+  }
+
+  &__image {
+    height: 80vh;
+    overflow: hidden;
+  }
+}
+
+// ============================================
+// STAIRCASE
+// ============================================
+.section--staircase {
+  height: 180vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: $space-xl;
+  background: linear-gradient(180deg, $stage-black 0%, $charcoal 50%, $stage-black 100%);
+}
+
+.staircase {
+  &__content {
+    max-width: 700px;
+    margin-bottom: $space-xl;
+  }
+
+  &__visual {
+    position: relative;
+    height: 60vh;
+    overflow: hidden;
+  }
+
+  &__image {
+    width: 100%;
+    height: 125%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translateY(-10%);
+  }
+
+  &__ornament {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 200px;
+    background: linear-gradient(to bottom, transparent, $antique-gold, transparent);
+  }
+}
+
+// ============================================
+// FOYER
+// ============================================
+.section--foyer {
+  padding: $space-xl;
+  background: linear-gradient(135deg, $stage-black 0%, $charcoal 100%);
+}
+
+.foyer {
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $space-xl;
+    align-items: center;
+    min-height: 80vh;
+  }
+
+  &__left {
+    padding-right: $space-lg;
+  }
+}
+
+// ============================================
+// MIRRORS
+// ============================================
+.section--mirrors {
+  padding: $space-xxl $space-xl;
+  background: $stage-black;
+}
+
+.mirrors {
+  &__header {
+    text-align: center;
+    margin-bottom: $space-xl;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: $space-md;
+    height: 60vh;
+  }
+
+  &__item {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+
+    &--1 { transform: translateY(0); }
+    &--2 { transform: translateY(20px); }
+    &--3 { transform: translateY(-10px); }
+    &--4 { transform: translateY(30px); }
+  }
+}
+
+// ============================================
+// FIRST GLIMPSE
+// ============================================
+.section--glimpse {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $stage-black;
+}
+
+.glimpse {
+  &__content {
+    text-align: center;
+    position: relative;
+  }
+
+  &__silhouette {
+    width: 300px;
+    height: 500px;
+    margin: 0 auto $space-lg;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  }
+
+  &__title {
+    font-family: $font-display;
+    font-size: clamp(2rem, 5vw, 4rem);
+    color: $chandelier-ivory;
+    margin-bottom: $space-md;
+  }
+
+  &__text {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+// ============================================
+// ROYAL BOXES
+// ============================================
+.section--royal {
+  padding: $space-xl;
+  background: linear-gradient(180deg, $stage-black 0%, $deep-crimson 50%, $stage-black 100%);
+}
+
+.royal {
+  &__content {
+    margin-bottom: $space-xl;
+  }
+
+  &__gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $space-md;
+    height: 60vh;
+  }
+
+  &__item {
+    height: 100%;
+    overflow: hidden;
+
+    .image-reveal {
+      height: 100%;
+    }
+  }
+}
+
+// ============================================
+// SALONS
+// ============================================
+.section--salons {
+  padding: $space-xxl $space-xl;
+  background: $stage-black;
+}
+
+.salons {
+  &__content {
+    margin-bottom: $space-xl;
+  }
+
+  &__editorial {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr;
+    gap: $space-md;
+    align-items: start;
+  }
+
+  &__image {
+    overflow: hidden;
+
+    &--1 { height: 60vh; }
+    &--2 { height: 45vh; margin-top: $space-xl; }
+  }
+
+  &__text-block {
+    padding: $space-lg 0;
+  }
+
+  &__number {
+    font-family: $font-display;
+    font-size: 4rem;
+    color: $antique-gold;
+    display: block;
+    margin-bottom: $space-sm;
+  }
+
+  &__caption {
+    font-family: $font-primary;
+    font-size: 1.125rem;
+    font-style: italic;
+    color: $chandelier-ivory;
+    opacity: 0.8;
+  }
+}
+
+// ============================================
+// CORRIDORS
+// ============================================
+.section--corridors {
+  height: 250vh;
+  padding: $space-xl;
+  background: linear-gradient(180deg, $stage-black 0%, $velvet-burgundy 30%, $opera-red 50%, $velvet-burgundy 70%, $stage-black 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.corridors {
+  &__content {
+    margin-bottom: $space-xl;
+  }
+
+  &__visual {
+    position: relative;
+    height: 60vh;
+    display: flex;
+    gap: $space-md;
+  }
+
+  &__image {
+    flex: 1;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &--left {
+      background-color: $opera-red;
+    }
+
+    &--right {
+      background-color: $velvet-burgundy;
+      margin-top: $space-xl;
+    }
+  }
+
+  &__text {
+    margin-top: $space-xl;
+    text-align: center;
+  }
+}
+
+// ============================================
+// ORCHESTRA
+// ============================================
+.section--orchestra {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: $space-xl;
+  background: $stage-black;
+}
+
+.orchestra {
+  &__content {
+    text-align: center;
+    margin-bottom: $space-xl;
+  }
+
+  &__visualizer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 200px;
+    width: 100%;
+    max-width: 800px;
+  }
+
+  &__line {
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to top, transparent, $antique-gold, transparent);
+    transform-origin: center;
+    transform: scaleY(0.3);
+  }
+}
+
+// ============================================
+// WINGS
+// ============================================
+.section--wings {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: $space-xl;
+  gap: $space-xl;
+  align-items: center;
+  background: linear-gradient(180deg, $stage-black 0%, $shadow-black 100%);
+}
+
+.wings {
+  &__content {
+    padding-right: $space-lg;
+  }
+
+  &__image {
+    height: 70vh;
+    overflow: hidden;
+  }
+}
+
+// ============================================
+// DRESS CIRCLE
+// ============================================
+.section--dress-circle {
+  height: 150vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: $space-xl;
+  background: $stage-black;
+}
+
+.dress-circle {
+  &__content {
+    margin-bottom: $space-xl;
+    text-align: center;
+  }
+
+  &__panorama {
+    width: 100%;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: $velvet-burgundy;
+    overflow: hidden;
+  }
+}
+
+// ============================================
+// REVELATION
+// ============================================
+.section--revelation {
+  min-height: 200vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: $space-xxl $space-xl;
+  background: $stage-black;
+}
+
+.revelation {
+  &__content {
+    text-align: center;
+    margin-bottom: $space-xl;
+  }
+
+  &__title {
+    font-family: $font-display;
+    font-size: clamp(4rem, 12vw, 10rem);
+    color: $chandelier-ivory;
+  }
+
+  &__image {
+    width: 80%;
+    max-width: 1200px;
+    height: 70vh;
+    margin: 0 auto $space-xl;
+  }
+
+  &__statement {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  &__text {
+    font-family: $font-primary;
+    font-size: clamp(1.25rem, 2vw, 1.75rem);
+    font-weight: 300;
+    line-height: 2;
+    text-align: center;
+  }
+}
+
+// ============================================
+// ARIA
+// ============================================
+.section--aria {
+  min-height: 200vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: $space-xxl $space-xl;
+  background: linear-gradient(180deg, $stage-black 0%, $charcoal 50%, $stage-black 100%);
+}
+
+.aria {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: $space-xl;
+  }
+
+  &__line {
+    font-family: $font-display;
+    font-size: clamp(3rem, 8vw, 7rem);
+    color: $chandelier-ivory;
+    text-align: center;
+  }
+}
+
+// ============================================
+// DEVOTION
+// ============================================
+.section--devotion {
+  padding: $space-xxl $space-xl;
+  background: linear-gradient(180deg, $stage-black 0%, $deep-crimson 50%, $stage-black 100%);
+}
+
+.devotion {
+  &__content {
+    margin-bottom: $space-xl;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $space-md;
+    height: 60vh;
+  }
+
+  &__item {
+    height: 100%;
+    overflow: hidden;
+
+    .image-reveal {
+      height: 100%;
+    }
+  }
+}
+
+// ============================================
+// FINAL CURTAIN
+// ============================================
+.section--final-curtain {
+  height: 200vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $stage-black;
+}
+
+.final-curtain {
+  &__visual {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  &__fabric {
+    position: absolute;
+    top: -100%;
+    width: 50%;
+    height: 200%;
+    background: linear-gradient(180deg, $opera-red 0%, $velvet-burgundy 50%, $deep-crimson 100%);
+
+    &--left {
+      left: 0;
+      transform-origin: left center;
+    }
+
+    &--right {
+      right: 0;
+      transform-origin: right center;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: $space-xl;
+  }
+
+  &__text {
+    font-family: $font-primary;
+    font-size: clamp(1.25rem, 2vw, 1.75rem);
+    font-weight: 300;
+    font-style: italic;
+    line-height: 2;
+    color: $chandelier-ivory;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+// ============================================
+// APPLAUSE
+// ============================================
+.section--applause {
+  min-height: 150vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $space-xxl $space-xl;
+  background: $stage-black;
+}
+
+.applause {
+  &__content {
+    text-align: center;
+    position: relative;
+  }
+
+  &__word {
+    font-family: $font-display;
+    color: $chandelier-ivory;
+
+    &--1 {
+      font-size: clamp(3rem, 8vw, 6rem);
+    }
+
+    &--2 {
+      font-size: clamp(4rem, 10vw, 8rem);
+      color: $antique-gold;
+    }
+
+    &--3 {
+      font-size: clamp(5rem, 12vw, 10rem);
+    }
+
+    &--4 {
+      font-size: clamp(6rem, 14vw, 12rem);
+      color: $warm-gold;
+    }
+  }
+}
+
+// ============================================
+// EMPTY STAGE
+// ============================================
+.section--empty {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: $space-xxl $space-xl;
+  background: linear-gradient(180deg, $stage-black 0%, $shadow-black 100%);
+}
+
+.empty {
+  &__image {
+    width: 70%;
+    max-width: 1000px;
+    height: 50vh;
+    margin-bottom: $space-xl;
+    overflow: hidden;
+  }
+
+  &__content {
+    text-align: center;
+  }
+
+  &__title {
+    font-family: $font-display;
+    font-size: clamp(2rem, 5vw, 4rem);
+    color: $chandelier-ivory;
+    margin-bottom: $space-md;
+  }
+
+  &__text {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+// ============================================
+// FINAL SCREEN
+// ============================================
+.section--final {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $stage-black;
+}
+
+.final {
+  &__content {
+    text-align: center;
+  }
+
+  &__title {
+    font-family: $font-display;
+    font-size: clamp(3rem, 8vw, 6rem);
+    color: $chandelier-ivory;
+    letter-spacing: 0.15em;
+    margin-bottom: $space-md;
+  }
+
+  &__model {
+    font-family: $font-secondary;
+    font-size: clamp(0.75rem, 1.5vw, 1rem);
+    font-weight: 300;
+    letter-spacing: 0.4em;
+    color: $chandelier-ivory;
+    opacity: 0.7;
+    margin-bottom: $space-lg;
+  }
+
+  &__season {
+    font-family: $font-primary;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-weight: 300;
+    letter-spacing: 0.3em;
+    color: $antique-gold;
+    margin-bottom: $space-xl;
+  }
+
+  &__divider {
+    width: 60px;
+    height: 1px;
+    background: $antique-gold;
+    margin: 0 auto $space-xl;
+  }
+
+  &__closing {
+    font-family: $font-primary;
+    font-size: clamp(0.875rem, 1.5vw, 1.125rem);
+    font-weight: 300;
+    letter-spacing: 0.3em;
+    color: $chandelier-ivory;
+    opacity: 0.6;
+    margin-bottom: $space-sm;
+  }
+
+  &__legend {
+    font-family: $font-primary;
+    font-size: clamp(0.875rem, 1.5vw, 1.125rem);
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: 0.2em;
+    color: $antique-gold;
+    opacity: 0.8;
+  }
+}
+
+// ============================================
+// FOOTER
+// ============================================
+.footer {
+  position: relative;
+  padding: $space-xxl $space-xl $space-xl;
+  background: $stage-black;
+  text-align: center;
+
+  &__content {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  &__divider {
+    width: 40px;
+    height: 1px;
+    background: $antique-gold;
+    margin: 0 auto $space-xl;
+    opacity: 0.5;
+  }
+
+  &__studio {
+    font-family: $font-secondary;
+    font-size: 0.6875rem;
+    font-weight: 300;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: $chandelier-ivory;
+    opacity: 0.7;
+    margin-bottom: $space-sm;
+  }
+
+  &__credit {
+    font-family: $font-primary;
+    font-size: 0.875rem;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    color: $chandelier-ivory;
+    opacity: 0.6;
+    margin-bottom: $space-xs;
+  }
+
+  &__love {
+    font-family: $font-primary;
+    font-size: 0.75rem;
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: 0.1em;
+    color: $antique-gold;
+    opacity: 0.65;
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .footer {
+    padding: $space-xl $space-md $space-lg;
+  }
+}
+
+// ============================================
+// RESPONSIVE
+// ============================================
+@media (max-width: $breakpoint-lg) {
+  .section--entrance,
+  .section--wings {
+    grid-template-columns: 1fr;
+  }
+
+  .foyer__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mirrors__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .royal__gallery {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .salons__editorial {
+    grid-template-columns: 1fr;
+  }
+
+  .devotion__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .section {
+    padding: $space-lg $space-md;
+  }
+
+  .section--hero {
+    height: 250vh;
+  }
+
+  .section--corridors {
+    height: 180vh;
+  }
+
+  .hero__image-wrap {
+    width: 90%;
+  }
+
+  .corridors__visual {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .corridors__image {
+    height: 40vh;
+  }
+}

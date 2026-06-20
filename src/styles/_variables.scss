@@ -1,0 +1,42 @@
+// THE OPERA™ — Design System
+// Color Palette
+
+// Primary Colors
+$opera-red: #5A1015;
+$velvet-burgundy: #4A1116;
+$antique-gold: #B48A3C;
+$stage-black: #0D0D0D;
+$chandelier-ivory: #EFE4D2;
+$bronze-gold: #8E6A31;
+
+// Extended Palette
+$deep-crimson: #3D0A0E;
+$warm-gold: #D4A84B;
+$soft-ivory: #F5EDE0;
+$charcoal: #1A1A1A;
+$shadow-black: #050505;
+
+// Typography
+$font-primary: 'Cormorant Garamond', serif;
+$font-display: 'Playfair Display', serif;
+$font-secondary: 'Helvetica Neue', Arial, sans-serif;
+
+// Spacing
+$space-xs: 0.5rem;
+$space-sm: 1rem;
+$space-md: 2rem;
+$space-lg: 4rem;
+$space-xl: 8rem;
+$space-xxl: 12rem;
+
+// Transitions
+$ease-opera: cubic-bezier(0.25, 0.1, 0.25, 1);
+$ease-dramatic: cubic-bezier(0.77, 0, 0.175, 1);
+$ease-curtain: cubic-bezier(0.65, 0, 0.35, 1);
+
+// Breakpoints
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+$breakpoint-2xl: 1536px;
